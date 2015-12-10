@@ -1,0 +1,22 @@
+--------------------------------------------------------------------------------------------------------------------------------
+THINGS TO DO
+--------------------------------------------------------------------------------------------------------------------------------
+> Recreate all Client, Site and Group pages in user area, add deletion. - DONE
+> Site add should not allow for group selection, site edit should only display the groups available for the client. – DONE
+> Group add should not allow for subgroup selection, group edit should only display the subgroups available for the client and NOT allow the user to select the group being edited (no loops). - DONE
+> Find out how to disable changing the client ID in admin and user areas and apply it - DONE
+	- excluded from user area, difficult to disable in admin
+	- done in site
+	- done in group
+> GIT! – DONE
+> Add ajax and JS examples – DONE (on site edit, js exists in static ofc)
+> Add DFS/BFS search to current version
+> Form errors/validation and ensuring certain fields are unique (using ajax?)
+> Latex generation
+> Email
+> Tree of checkboxes/ nested checkboxes for the groups
+> Uploading files
+> Streaming files
+> Play around with datetime
+> Splitting the input side and report generation side <- does authentication span a project?
+> Keep groups as they are for now, however they will need to be changed
