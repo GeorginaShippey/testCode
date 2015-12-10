@@ -1,0 +1,30 @@
+{% load staticfiles %}
+{% if user.is_authenticated %}
+<html>
+    <head>
+        <title>Catllain</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{% static 'base.css' %}">
+    </head>
+<body>
+    <div class="page-header">
+        <h1><a href="/">Catllain</a></h1>
+    </div>
+    <div class="content container">
+        <div class="row">
+           
+            {% block content %}
+            {% endblock %}
+         
+        </div>
+    </div>
+</body>
+</html>
+{% else %}
+<html>
+<body>
+<a href="{% url 'admin:login' %}">Please Login</a>
+</body>
+</html>
+{% endif %}

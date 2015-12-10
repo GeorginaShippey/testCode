@@ -1,0 +1,9 @@
+{% extends 'app/base.html' %}
+{% block content %}
+<p>this is the client page</p>
+<p>Client name:{{client.name}}</p>
+<p>Client id:{{client.pk}}</p>
+</br>
+<a href="{% url 'app:client_edit' pk=client.pk %}">edit</a>
+{% endblock %}
+

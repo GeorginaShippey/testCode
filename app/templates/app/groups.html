@@ -1,0 +1,9 @@
+{% extends 'app/base.html' %}
+{% block content %}
+<p>this is the clients page</p>
+<a href="{% url 'app:group_new' %}">new group</a><br/>
+{% for group in groups %}
+<a href="{% url 'app:group' pk=group.pk %}">{{ group.name }}</a></br>
+{% endfor %}
+{% endblock %}
+

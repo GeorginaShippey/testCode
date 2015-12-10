@@ -1,0 +1,9 @@
+{% extends 'app/base.html' %}
+{% block content %}
+<p>this is the sites page</p>
+<a href="{% url 'app:site_new' %}">new site</a><br/>
+{% for site in sites %}
+<a href="{% url 'app:site' pk=site.pk %}">{{ site.name }}</a></br>
+{% endfor %}
+{% endblock %}
+

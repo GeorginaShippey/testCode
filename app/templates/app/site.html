@@ -1,0 +1,14 @@
+{% extends 'app/base.html' %}
+{% block content %}
+
+<p>this is the site page</p>
+<p>Site name:{{site.name}}</p>
+<p>Site id:{{site.pk}}</p>
+<p>Groups:</p>
+{% for group in site.groups.all %}
+    <li>{{group.name}}</li>
+{% endfor %}
+</br>
+<a href="{% url 'app:site_edit' pk=site.pk %}">edit</a>
+{% endblock %}
+

@@ -1,0 +1,14 @@
+{% extends 'app/base.html' %}
+{% block content %}
+
+<h1>Client</h1>
+<form method="POST" class="post-form">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit" class="save btn btn-default">Save</button>
+</form>
+<form action="client_delete" method="POST" class="post-form">
+{% csrf_token %}
+<button type="submit" class="save btn btn-default">Delete</button>
+</form>
+{% endblock %}

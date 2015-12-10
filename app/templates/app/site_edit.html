@@ -1,0 +1,33 @@
+{% extends 'app/base.html' %}
+{% block content %}
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="/static/admin/css/forms.css" />
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+{#<script src="{% static 'site.js' %}"></script>#}
+
+<script type="text/javascript" src="/admin/jsi18n/"></script>
+<script type="text/javascript" src="/static/admin/js/core.js"></script>
+<script type="text/javascript" src="/static/admin/js/admin/RelatedObjectLookups.js"></script>
+<script type="text/javascript" src="/static/admin/js/vendor/jquery/jquery.js"></script>
+<script type="text/javascript" src="/static/admin/js/jquery.init.js"></script>
+<script type="text/javascript" src="/static/admin/js/actions.js"></script>
+<script type="text/javascript" src="/static/admin/js/urlify.js"></script>
+<script type="text/javascript" src="/static/admin/js/prepopulate.js"></script>
+<script type="text/javascript" src="/static/admin/js/vendor/xregexp/xregexp.min.js"></script>
+<script type="text/javascript" src="/static/admin/js/SelectBox.js"></script>
+<script type="text/javascript" src="/static/admin/js/SelectFilter2.js"></script>
+
+
+<h1>Site</h1>
+<form method="POST" class="post-form">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit" class="save btn btn-default">Save</button>
+</form>
+<form action="site_delete" method="POST" class="post-form">
+{% csrf_token %}
+<button type="submit" class="save btn btn-default">Delete</button>
+</form>
+{% endblock %}

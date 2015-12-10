@@ -1,0 +1,7 @@
+{% extends 'app/base.html' %}
+{% block content %}
+<p>this is the index page</p>
+<a href="{% url 'app:clients' %}">Clients</a><br/>
+<a href="{% url 'app:sites' %}">Sites</a></br>
+<a href="{% url 'app:groups' %}">Groups</a></br>
+{% endblock %}

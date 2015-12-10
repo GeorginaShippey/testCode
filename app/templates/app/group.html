@@ -1,0 +1,9 @@
+{% extends 'app/base.html' %}
+{% block content %}
+<p>this is the group page</p>
+<p>Group name:{{group.name}}</p>
+<p>Group id:{{group.pk}}</p>
+</br>
+<a href="{% url 'app:group_edit' pk=group.pk %}">edit</a>
+{% endblock %}
+
