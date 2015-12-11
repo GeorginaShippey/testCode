@@ -1,3 +1,11 @@
+/*
+An example of a javascript file
+must be linked to by the template .html page
+e.g.
+<script src="{% static 'site.js' %}"></script>
+can then do things like post values to views and return them
+*/
+//once loaded
 $(document).ready( function() {
     /*
     $("#id_groups option").each(function() {
@@ -6,7 +14,9 @@ $(document).ready( function() {
         }
     });
     */
+    //alert to show no errors with js
     alert("js");
+    //getting a val from a div
     var x = $("#id_client").val();
     $("#id_client").on('change', function() {
         alert("hi");
@@ -30,6 +40,7 @@ $(document).ready( function() {
             $(this).remove();
             }
         });//id_groups option
+        // had a problem with the csrf not being found when posting
         var csrf = getCookie('csrftoken');
         $.ajax({
             type: "POST",
